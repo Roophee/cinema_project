@@ -349,7 +349,6 @@ input:checked + label {
 .seats__body-table-seats-place + label {
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   border: 1px solid #EF6C00;
   margin: 3px;
   padding: 2px 2px;
