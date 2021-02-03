@@ -5,7 +5,7 @@ $lineColor: #9E9E9E;
 $bgColor1:#1a1919;
 $bgColor2:#4242423f;
 
-root {
+:root {
     font-family: 'Oswald', sans-serif;
     font-size:18px;
     font-weight: 200;
@@ -254,9 +254,11 @@ input+label:hover {
     color:$font-color;
     background-color:#1565C0;
 }
+
 input:disabled+label {
     color:#616161;
 }
+
 input:focus+label {
     background-color:#ef5350;
     color:$font-color;
@@ -400,12 +402,12 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     font-size: 1.2rem;
 
     &__about{
-        line-height: 1.2;
+        line-height: 1.3;
 
         &  p {
             margin:0;
             padding:0;
-            margin-top:40px;
+            margin-top:30px;
         }
 
         & a {
@@ -474,7 +476,6 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
 
         }
     }
-
 }
 
 @media screen and (max-width:1060px) {
