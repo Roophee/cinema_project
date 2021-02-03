@@ -16,6 +16,10 @@ body {
     background-color: #000000;
 }
 
+#place {
+font-weight: 400;
+}
+
 .container {
     margin: auto;
     width: 80vw;
@@ -349,7 +353,7 @@ table {
     }
 
     &__body-table-row {
-        margin-right: 95px;
+        // margin-right: 95px;
         border-spacing: 10px;
     }
 
@@ -578,9 +582,6 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
             }
         }
 
-        &-submit-btn button{
-            height: 50px;
-        }
 }
 }
 
@@ -604,7 +605,7 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
         }
 
         &__search {
-            font-size: .8rem;
+            font-size: .75rem;
             min-width: 150px;
 
             &-form {
