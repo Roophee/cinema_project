@@ -418,13 +418,11 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     // appearance: none;
     // -moz-appearance:none;
     // -webkit-appearance: none;
+    position: absolute;
     width: 1px;
     height: 1px;
     border:0;
     padding:0;
-    color:$bgColor1;
-    background-color: $bgColor1;
-    border-color: $bgColor1;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
