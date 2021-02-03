@@ -569,6 +569,31 @@ input[name='ticketCustom'] {
   margin: 0 10px;
 }
 
+@media screen and (max-width: 1141px) {
+  .header {
+    height: 120px;
+  }
+  .header__container {
+    margin-bottom: -20px;
+  }
+  .header__nav {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-top: 10px;
+  }
+  .header__search {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .header__account {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 @media screen and (max-width: 1087px) {
   .header__account-avatar-img {
     width: 35px;
@@ -649,14 +674,11 @@ input[name='ticketCustom'] {
     font-size: .73rem;
   }
   .header__search {
-    font-size: .73rem;
+    font-size: .8rem;
     min-width: 200px;
   }
   .header__search-form {
     width: 200px;
-  }
-  .header__account-login-btn {
-    margin-left: 0;
   }
 }
 
@@ -668,7 +690,7 @@ input[name='ticketCustom'] {
     font-size: .6rem;
   }
   .seats__body-submit-btn button {
-    height: 40px;
+    height: 50px;
   }
 }
 
@@ -684,14 +706,19 @@ input[name='ticketCustom'] {
   .header__nav {
     min-width: 300px;
   }
+  .header__nav-item {
+    margin: 0;
+  }
   .header__search {
-    min-width: 180px;
+    font-size: .8rem;
+    min-width: 150px;
   }
   .header__search-form {
-    width: 180px;
+    width: 150px;
   }
   .header__account {
     margin-bottom: 10px;
+    margin-right: 10px;
   }
   .header__account-login-btn {
     margin-right: 5px;
