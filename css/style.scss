@@ -242,7 +242,7 @@ body {
 
 label {
     margin:0 5px;
-    padding:2px;
+    padding: 2px;
     border-radius: 2px;
     color:$green;
     font-size: 1.1rem;
@@ -268,15 +268,16 @@ input:checked+label {
 }
 
 .seats__body-table-seats-place+label  {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border:1px solid #EF6C00;
     margin:3px;
-    padding:2px 2px;
+    padding:3px;
     text-align: center;
     color:$font-color;
     background-color: $green;
 }
+
 .seats__body-table-seats-place+label:hover {
     background-color: #1565C0;
 }
