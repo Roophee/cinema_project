@@ -490,22 +490,13 @@ table {
   background-color: #3E2723;
 }
 
-input[name='ticketTime'] {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-input[name='ticketType'] {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-}
-
-input[name='ticketCustom'] {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .footer {
