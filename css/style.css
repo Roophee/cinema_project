@@ -369,6 +369,7 @@ table {
 .screen {
   height: 20px;
   border-top: 12px solid #2E7D32;
+  border-bottom-color: #000000;
   border-radius: 50%;
 }
 
