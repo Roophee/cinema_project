@@ -495,6 +495,9 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
   height: 1px;
   border: 0;
   padding: 0;
+  color: #1a1919;
+  background-color: #1a1919;
+  border-color: #1a1919;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
