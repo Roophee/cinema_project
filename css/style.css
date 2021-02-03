@@ -346,30 +346,17 @@ input:checked + label {
   color: #FAFAFA;
 }
 
-.seats__body-table-seats-place + label {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #EF6C00;
-  margin: 3px;
-  padding: 3px;
-  text-align: center;
-  color: #FAFAFA;
-  background-color: #2E7D32;
-}
-
-.seats__body-table-seats-place + label:hover {
-  background-color: #1565C0;
-}
-
 table {
   border-spacing: 0;
 }
 
 .screen {
+  width: 100%;
   height: 20px;
   border-top: 12px solid #2E7D32;
   border-bottom-color: #000000;
   border-radius: 50%;
+  content: " ";
 }
 
 .content__seats {
@@ -430,6 +417,18 @@ table {
   padding-bottom: 15px;
 }
 
+.seats__body-table-seats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .seats__body-submit {
   margin-top: 20px;
   width: 100%;
@@ -447,8 +446,8 @@ table {
 .seats__body-submit-btn button {
   width: 150px;
   height: 60px;
-  background-color: #2E7D32;
-  color: #FAFAFA;
+  background-color: #1a1919;
+  color: #1B5E20;
   border-radius: 5px;
   font-size: 1.2rem;
 }
@@ -684,7 +683,7 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     border-spacing: 5px;
   }
   .seats__body-table-seats-place + label {
-    font-size: .6rem;
+    font-size: .8rem;
   }
   .seats__body-submit-btn button {
     height: 50px;
@@ -735,10 +734,10 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     font-size: 1rem;
   }
   .seats__body-table {
-    border-spacing: 1px;
+    border-spacing: 5px;
   }
   .seats__body-table-seats-place + label {
-    font-size: .425rem;
+    font-size: 1rem;
   }
   .seats__body-table-row {
     font-size: .8rem;
