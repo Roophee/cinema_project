@@ -380,6 +380,8 @@ table {
 
     &__body-table-seats-place {
         appearance: none;
+        -moz-appearance:none;
+        -webkit-appearance: none;
 
         // & label {
         // font-size: .5rem;
@@ -407,12 +409,18 @@ table {
 
 input[name='ticketTime'] {
     appearance: none;
+    -moz-appearance:none;
+    -webkit-appearance: none;
 }
 input[name='ticketType'] {
     appearance: none;
+    -moz-appearance:none;
+    -webkit-appearance: none;
 }
 input[name='ticketCustom'] {
     appearance: none;
+    -moz-appearance:none;
+    -webkit-appearance: none;
 }
 
 .footer {

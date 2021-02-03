@@ -470,9 +470,9 @@ table {
 }
 
 .seats__body-table-seats-place {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .seats__body-table-seats-place:focus + label {
@@ -488,21 +488,21 @@ table {
 }
 
 input[name='ticketTime'] {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 input[name='ticketType'] {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 input[name='ticketCustom'] {
+  appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 .footer {
