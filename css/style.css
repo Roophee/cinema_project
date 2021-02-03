@@ -269,6 +269,7 @@ body {
           align-items: center;
   color: #FAFAFA;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .content__video-label {
@@ -314,7 +315,7 @@ body {
 }
 
 .hide {
-  margin-top: -360px;
+  margin-top: -380px;
 }
 
 label {
@@ -368,7 +369,7 @@ table {
 .screen {
   height: 20px;
   border-top: 12px solid #2E7D32;
-  border-radius: 100%;
+  border-radius: 50%;
 }
 
 .content__seats {
@@ -470,6 +471,7 @@ table {
 }
 
 .seats__body-table-seats-place {
+  position: absolute;
   width: 1px;
   height: 1px;
   border: 0;

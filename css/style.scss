@@ -197,6 +197,7 @@ body {
     align-items: center;
     color:$font-color;
     width: 100%;
+    margin-bottom: 20px;
 
     &-label {
     z-index: 2;
@@ -236,7 +237,7 @@ body {
 }
 
 .hide {
-    margin-top:-360px;
+    margin-top:-380px;
 }
 
 label {
@@ -285,11 +286,10 @@ table {
     border-spacing: 0;
 }
 
-
 .screen {
     height: 20px;
     border-top:12px solid $green;
-    border-radius: 100%;
+    border-radius: 50%;
 }
 
 .content {
@@ -379,10 +379,7 @@ table {
 
 
     &__body-table-seats-place {
-        // appearance: none;
-        // -moz-appearance:none;
-        // -webkit-appearance: none;
-
+        position:absolute;
         width: 1px;
         height: 1px;
         border:0;
@@ -415,9 +412,6 @@ table {
 }
 
 input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
-    // appearance: none;
-    // -moz-appearance:none;
-    // -webkit-appearance: none;
     position: absolute;
     width: 1px;
     height: 1px;
