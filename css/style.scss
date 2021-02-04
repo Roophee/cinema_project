@@ -124,10 +124,6 @@ font-weight: 400;
             margin-left:10px;
             cursor: pointer;
 
-            & >span {
-                vertical-align: middle;
-            }
-
             &:hover {
                 background-color: #388E3C;
             }
@@ -464,23 +460,10 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
 }
 
 @media screen and (max-width:1087px) {
-    .header {
-
-        &__account{
-            &-avatar-img{
-                width: 35px;
-                height: 35px;
-            }
-
-            &-login-btn {
-                width: 60px;
-                height: 25px;
+    .header__account-login-btn {
                 font-size: 1.2rem;
             }
-
         }
-    }
-}
 
 @media screen and (max-width:1060px) {
     .header {
