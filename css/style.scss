@@ -1,29 +1,32 @@
+@import "normalize.css";
+
+$black: #000;
 $font-color: #FAFAFA;
 $green: #2E7D32;
 $darkGreen: #1B5E20;
 $lineColor: #9E9E9E;
-$bgColor1:#1a1919;
-$bgColor2:#4242423f;
+$bgColor1: #1a1919;
+$bgColor2: #4242423f;
+$red: #c62828;
+$lightRed: #ef5350;
 
 :root {
     font-family: 'Oswald', sans-serif;
-    font-size:18px;
+    font-size: 18px;
     font-weight: 200;
     box-sizing: border-box;
 }
 
 body {
-    background-color: #000000;
-}
-
-#place {
-font-weight: 400;
+    margin: 0;
+    padding: 0;
+    background-color: $black;
 }
 
 .container {
     margin: auto;
     width: 80vw;
-    display:flex;
+    display: flex;
     flex-direction: column;
     overflow: hidden;
 }
@@ -61,22 +64,22 @@ font-weight: 400;
         }
 
         &-item {
-            padding:5px;
-            margin:5px;
+            padding: 5px;
+            margin: 5px;
             border-radius: 6px;
             color: $font-color;
-            text-align:center;
+            text-align: center;
 
-            &-link {
+            & a {
                 text-decoration: none;
                 color: $font-color;
-                text-align:center;
+                text-align: center;
 
-                &:hover{
+                &:hover {
                     color: $green;
                 }
 
-                &:active{
+                &:active {
                     color: $darkGreen;
                 }
             }
@@ -84,22 +87,28 @@ font-weight: 400;
     }
 
     &__search {
-        display:inline-block;
-        min-width: 240px;
-        order:2;
+        order: 2;
+
+        &-form-input {
+            width: 270px;
+            font-size: 1rem;
+            font-family: inherit;
+            letter-spacing: 2px;
+            font-weight: 300;
+            margin: 0 5px;
+        }
     }
 
     &__account {
         display: flex;
         align-items: center;
-        justify-content:flex-end;
-        order:3;
+        justify-content: flex-end;
+        order: 3;
 
         &-avatar {
             margin: 0 10px;
             display: flex;
             align-items: center;
-            flex-direction: row;
 
             &-img {
                 width: 45px;
@@ -108,7 +117,7 @@ font-weight: 400;
                 border: 2px solid $font-color;
 
                 &:hover {
-                    border-color: #2E7D32;
+                    border-color: $green;
                 }
             }
         }
@@ -117,11 +126,11 @@ font-weight: 400;
             height: 30px;
             font-size: 1.25rem;
             text-align: center;
-            background-color: #2E7D32;
+            background-color: $green;
             border-radius: 10px;
             color: $font-color;
             padding:  7px 10px;
-            margin-left:10px;
+            margin-left: 10px;
             cursor: pointer;
 
             &:hover {
@@ -129,11 +138,10 @@ font-weight: 400;
             }
 
             &:active {
-                background-color:$darkGreen;
+                background-color: $darkGreen;
             }
         }
     }
-
 }
 
 .container__content {
@@ -147,11 +155,10 @@ font-weight: 400;
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     padding: 15px 30px;
-    background-color: #000000;
+    background-color: $black;
 
     &-header {
         width: 100%;
@@ -161,7 +168,7 @@ font-weight: 400;
     }
 
     &-poster {
-        margin-right:30px;
+        margin-right: 30px;
 
         &-img {
             width: 320px;
@@ -170,24 +177,28 @@ font-weight: 400;
     }
 }
 
-.table-header {
-    text-align: left;
-    height: 17px;
-    width: 150px;
-    padding: 5px 5px 5px;
-    color: $font-color;
-    border-bottom: 1px solid $lineColor;
-    margin: 0;
-}
+.table {
 
-.table-data {
-    text-align: left;
-    height: 17px;
-    width: 450px;
-    padding:3px 1px;
-    color: $font-color;
-    border-bottom: 1px solid $lineColor;
-    margin: 0 ;
+    &-border{
+        color: $font-color;
+        border-bottom: 1px solid $lineColor;
+        margin: 0;
+    }
+
+    &-header {
+        text-align: left;
+        font-size: .9rem;
+        width: 120px;
+        padding: 5px 5px 5px;
+    }
+
+    &-data {
+        text-align: left;
+        font-size: .9rem;
+        line-height: 1.3;
+        width: 400px;
+        padding: 3px 1px;
+    }
 }
 
 .content__video {
@@ -195,7 +206,7 @@ font-weight: 400;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    color:$font-color;
+    color: $font-color;
     width: 100%;
     margin-bottom: 20px;
 
@@ -203,33 +214,33 @@ font-weight: 400;
     z-index: 2;
     display: inline-block;
     width: 87%;
-    background-color:$bgColor1;
+    background-color: $bgColor1;
     border-radius: 7px;
     padding: 0;
     text-align: center;
     font-size: 1.25rem;
 
-    & p{
+    & p {
         margin: 0;
         padding: 10px;
     }
 
     &:hover {
         color: $green;
-        background-color:$bgColor1 ;
+        background-color: $bgColor1 ;
     }
 
     &:active {
-        color:$darkGreen;
-        background-color:$bgColor1;
+        color: $darkGreen;
+        background-color: $bgColor1;
     }
 }
-    &-trailer{
+    &-trailer {
         z-index: 1;
-        display:flex;
+        display: flex;
         justify-content: center;
         margin-top: 0;
-        padding:20px 0;
+        padding: 20px 0;
         width: 87%;
         background-color: $bgColor2;
         transition: margin-top  .5s linear;
@@ -241,32 +252,32 @@ font-weight: 400;
 }
 
 label {
-    margin:0 5px;
+    margin: 0 5px;
     padding: 2px;
     border-radius: 2px;
-    color:$green;
+    color: $green;
     font-size: 1.1rem;
-    background-color:$bgColor2;
+    background-color: $bgColor2;
 
 }
 
 input+label:hover {
-    color:$font-color;
-    background-color:#1565C0;
+    color: $font-color;
+    background-color: #1565C0;
 }
 
 input:disabled+label {
-    color:#616161;
+    color: #616161;
 }
 
 input:focus+label {
-    background-color:#ef5350;
-    color:$font-color;
+    background-color: $lightRed;
+    color: $font-color;
 }
 
 input:checked+label {
-    background-color:#c62828;
-    color:$font-color
+    background-color: $red;
+    color: $font-color
 }
 
 table {
@@ -276,8 +287,8 @@ table {
 .screen {
     width: 100%;
     height: 20px;
-    border-top:12px solid $green;
-    border-bottom-color: #000000;
+    border-top: 12px solid $green;
+    border-bottom-color: $black;
     border-radius: 50%;
     content:" ";
 }
@@ -289,17 +300,17 @@ table {
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        color:$font-color;
+        color: $font-color;
         width: 90%;
-    }
 
-    &__seats-container {
-        width: 100%;
-        margin-bottom: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
+        &-container {
+            width: 100%;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
     }
 }
 
@@ -308,16 +319,15 @@ table {
     &__body {
         width: 95%;
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         background-color: $bgColor2;
         border-radius: 15px;
         padding-bottom: 15px;
 
-        &-table-seats{
-            display:flex;
+        &-table-seats {
+            display: flex;
             justify-content: center;
             align-items: center;
         }
@@ -329,11 +339,11 @@ table {
             justify-content: center;
             align-items: center;
 
-            &-btn button{
+            &-btn button {
                 width: 150px;
                 height: 60px;
                 background-color: $bgColor1;
-                color:$darkGreen;
+                color: $darkGreen;
                 border-radius: 5px;
                 font-size: 1.2rem;
             }
@@ -357,20 +367,20 @@ table {
     }
 
     &__body-table-seats-place {
-        position:absolute;
+        position: absolute;
         width: 1px;
         height: 1px;
-        border:0;
-        padding:0;
+        border: 0;
+        padding: 0;
         clip: rect(0 0 0 0);
         overflow: hidden;
 
         &:focus+label {
-            background-color: #ef5350;
+            background-color: $lightRed;
         }
 
         &:checked+label {
-            background-color: #c62828;
+            background-color: $red;
         }
 
         &:disabled+label {
@@ -379,43 +389,44 @@ table {
     }
 }
 
-input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
+input[name='ticketTime'],
+input[name='ticketType'],
+input[name='ticketCustom'] {
     position: absolute;
     width: 1px;
     height: 1px;
-    border:0;
-    padding:0;
+    border: 0;
+    padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
 
 .footer {
-    display:flex;
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: 170px;
     width: 100%;
     border-top: 1px solid $lineColor;
-    color:$font-color;
+    color: $font-color;
     font-size: 1.2rem;
 
-    &__about{
+    &__about {
         line-height: 1.3;
 
         &  p {
-            margin:0;
-            padding:0;
-            margin-top:30px;
+            margin: 0;
+            padding: 0;
+            margin-top: 30px;
         }
 
         & a {
         text-decoration: none;
-        font-style:normal;
-        color:$font-color;
+        font-style: normal;
+        color: $font-color;
 
         &:hover {
-            color:$green;
+            color: $green;
         }
         }
     }
@@ -423,7 +434,6 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     &__logo {
         display:flex;
         flex-wrap: wrap;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
 
@@ -435,7 +445,21 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     }
 }
 
-@media screen and (max-width:1141px) {
+.weight400 {
+    font-weight: 400;
+}
+
+.whitespaces {
+    &::before {
+        content:"\00A0";
+    }
+
+    &::after {
+        content:"\00A0";
+    }
+}
+
+@media screen and (max-width:1143px) {
     .header {
         height: 120px;
 
@@ -443,17 +467,17 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
             margin-bottom: -20px;
         }
 
-        &__nav{
-            order:3;
+        &__nav {
+            order: 3;
             margin-top: 10px;
         }
 
-        &__search{
-            order:2;
+        &__search {
+            order: 2;
         }
 
-        &__account{
-            order:1;
+        &__account {
+            order: 1;
         }
     }
 }
@@ -472,17 +496,17 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
             margin-bottom: -20px;
         }
 
-        &__nav{
+        &__nav {
             order:3;
             margin-top: 10px;
         }
 
-        &__search{
-            order:2;
+        &__search {
+            order: 2;
         }
 
-        &__account{
-            order:1;
+        &__account {
+            order: 1;
         }
     }
 
@@ -493,7 +517,7 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     .footer {
         justify-content: space-around;
 
-        &__about{
+        &__about {
             margin-bottom: 10px;
         }
 
@@ -507,25 +531,35 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
 
     .header{
 
-    &__nav {
-        min-width:350px;
-        font-size: 1rem;
-    }
-
-    &__account-login-btn {
-        margin-left:5px;
-
-        &>span {
-            vertical-align:baseline ;
+        &__nav {
+            min-width: 350px;
+            font-size: 1rem;
         }
-    }
 
-    .seats__body-table-seats-place+label {
-        font-size: .75rem;
-    }
+        &__search-form-input {
+            font-size: .8rem;
+            width: 180px;
 
-    .seats__body-table {
-        border-spacing: 10px;
+        }
+
+        &__account {
+            &-avatar-img {
+                width: 35px;
+                height: 35px;
+            }
+            &-login-btn {
+                padding: 3px 4px;
+                margin-left: 5px;
+            }
+        }
+
+        .seats__body-table-seats-place+label {
+            font-size: .75rem;
+        }
+
+        .seats__body-table {
+            border-spacing: 10px;
+        }
     }
 }
 
@@ -534,27 +568,19 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
         width: 90vw;
     }
 
-    .header{
-    &__container {
-        width: 100%;;
-    }
+    .header {
+        height: 140px;
 
-        &__nav{
-            font-size: .73rem;
-        }
+            &__container {
+                width: 100%;
+            }
 
-        &__search {
-            font-size: .8rem;
-            min-width: 200px;
-
-            &-form {
-                width: 200px;
+            &__nav{
+                font-size: 1rem;
             }
         }
-    }
 
-    }
-    .seats__body{
+    .seats__body {
 
         &-table {
         border-spacing: 5px;
@@ -563,8 +589,7 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
                 font-size: .8rem;
             }
         }
-
-}
+    }
 }
 
 @media screen and (max-width:420px) {
@@ -574,44 +599,37 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     }
 
     .header {
-
-        &__container {
-            justify-content: center;
-        }
-        &__nav{
-            min-width: 300px;
-
-            &-item {
-                margin: 0;
+            &__container {
+                justify-content: center;
+                flex-direction: column;
             }
-        }
+            &__nav {
+                min-width: 300px;
+                margin-top: 5px;
+                font-size: .8rem;
 
-        &__search {
-            font-size: .75rem;
-            min-width: 150px;
-
-            &-form {
-                width: 150px;
+                &-item {
+                    margin: 0;
+                }
             }
-        }
 
-        &__account{
-            margin-bottom:10px;
-            margin-right:10px;
+            &__account {
+                margin-bottom: 10px;
+                margin-right: 10px;
 
-            &-login-btn{
-            margin-right: 5px;
+                &-login-btn {
+                margin-right: 5px;
+            }
         }
     }
-}
 
-    .content__info{
+    .content__info {
         font-size: .95rem;
 
         &-poster {
             margin-right: 0;
 
-            &-img{
+            &-img {
                 width: 290px;
                 height: 407px;
             }
@@ -619,7 +637,7 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
     }
 
     label {
-        margin:0 2px;
+        margin: 0 2px;
         font-size: 1rem;
     }
 
@@ -630,8 +648,8 @@ input[name='ticketTime'], input[name='ticketType'], input[name='ticketCustom'] {
             font-size: 1rem;
         }
 
-        &-row{
-            font-size:.8rem;
+        &-row {
+            font-size: .8rem;
         }
-}
+    }
 }

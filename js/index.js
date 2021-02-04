@@ -1,8 +1,8 @@
 "use strict"
 
-const trailerSection = document.querySelector('.content__video-trailer'),
-    trailerButton = document.querySelector('.content__video-label'),
-    videoFrame = document.querySelector('iframe');
+const trailerSection = document.querySelector('.content__video-trailer');
+const trailerButton = document.querySelector('.content__video-label');
+const videoFrame = document.querySelector('iframe');
 
 const resetVideoSrc = function() {
     videoFrame.attributes.src.nodeValue='';
