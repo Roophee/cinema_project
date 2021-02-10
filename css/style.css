@@ -2,7 +2,7 @@
 :root {
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -16,14 +16,6 @@ body {
 .container {
   margin: auto;
   width: 80vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
 }
 
 .header {
@@ -38,10 +30,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   border-bottom: 1px solid #9E9E9E;
 }
 
@@ -58,10 +46,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .header__nav {
@@ -71,7 +55,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-width: 450px;
   font-size: 1.25rem;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
@@ -164,16 +147,20 @@ body {
 }
 
 .header__account-login-btn {
-  width: 70px;
-  height: 30px;
   font-size: 1.25rem;
-  text-align: center;
+  font-family: inherit;
+  font-weight: 300;
+  letter-spacing: 2px;
   background-color: #2E7D32;
-  border-radius: 10px;
+  border-radius: 6px;
+  border-color: #FAFAFA;
+  border-width: thin;
   color: #FAFAFA;
   padding: 7px 10px;
-  margin-left: 10px;
+  margin: 0 10px;
   cursor: pointer;
+  -webkit-box-shadow: 1px 1px 3px 1px #1B5E20;
+          box-shadow: 1px 1px 3px 1px #1B5E20;
 }
 
 .header__account-login-btn:hover {
@@ -233,7 +220,13 @@ body {
   height: 450px;
 }
 
-.table-border {
+.table-border .table-header {
+  color: #FAFAFA;
+  border-bottom: 1px solid #9E9E9E;
+  margin: 0;
+}
+
+.table-border .table-data {
   color: #FAFAFA;
   border-bottom: 1px solid #9E9E9E;
   margin: 0;
@@ -270,23 +263,24 @@ body {
           align-items: center;
   color: #FAFAFA;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .content__video-label {
   z-index: 2;
-  display: inline-block;
   width: 87%;
   background-color: #1a1919;
   border-radius: 7px;
-  padding: 0;
-  text-align: center;
-  font-size: 1.25rem;
-}
-
-.content__video-label p {
-  margin: 0;
-  padding: 10px;
+  -webkit-box-shadow: 1px 1px 3px 1px #1B5E20;
+          box-shadow: 1px 1px 3px 1px #1B5E20;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: inherit;
+  letter-spacing: 1px;
+  color: #FAFAFA;
+  border: 1px solid #1B5E20;
+  cursor: pointer;
 }
 
 .content__video-label:hover {
@@ -296,7 +290,7 @@ body {
 
 .content__video-label:active {
   color: #1B5E20;
-  background-color: #1a1919;
+  background-color: #161616;
 }
 
 .content__video-trailer {
@@ -310,7 +304,6 @@ body {
   margin-top: 0;
   padding: 20px 0;
   width: 87%;
-  background-color: #4242423f;
   -webkit-transition: margin-top  .5s linear;
   transition: margin-top  .5s linear;
 }
@@ -326,6 +319,8 @@ label {
   color: #2E7D32;
   font-size: 1.1rem;
   background-color: #4242423f;
+  font-weight: 400;
+  cursor: pointer;
 }
 
 input + label:hover {
@@ -335,6 +330,7 @@ input + label:hover {
 
 input:disabled + label {
   color: #616161;
+  cursor: not-allowed;
 }
 
 input:focus + label {
@@ -396,6 +392,12 @@ table {
           align-items: center;
 }
 
+.seats__label h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
 .seats__body {
   width: 95%;
   display: -webkit-box;
@@ -412,6 +414,7 @@ table {
   background-color: #4242423f;
   border-radius: 15px;
   padding-bottom: 15px;
+  font-weight: 600;
 }
 
 .seats__body-table-seats {
@@ -441,12 +444,31 @@ table {
 }
 
 .seats__body-submit-btn button {
-  width: 150px;
+  width: 190px;
   height: 60px;
   background-color: #1a1919;
   color: #1B5E20;
   border-radius: 5px;
+  border: 2px solid #2E7D32;
   font-size: 1.2rem;
+  -webkit-box-shadow: 1px 1px 3px 1px #1B5E20;
+          box-shadow: 1px 1px 3px 1px #1B5E20;
+  cursor: pointer;
+}
+
+.seats__body-submit-btn button:hover {
+  background-color: #1565C0;
+  color: #FAFAFA;
+}
+
+.seats__body-submit-btn button:active {
+  background-color: #c62828;
+  color: #FAFAFA;
+}
+
+.seats__body-submit-btn button:focus {
+  background-color: #c62828;
+  color: #FAFAFA;
 }
 
 .seats__body-table {
@@ -485,8 +507,10 @@ table {
 
 .seats__body-table-seats-place:disabled + label {
   background-color: #3E2723;
+  cursor: not-allowed;
 }
 
+input[name='ticketDate'],
 input[name='ticketTime'],
 input[name='ticketType'],
 input[name='ticketCustom'] {
@@ -555,8 +579,8 @@ input[name='ticketCustom'] {
   margin: 0 10px;
 }
 
-.weight400 {
-  font-weight: 400;
+.whitespaces {
+  font-weight: 700;
 }
 
 .whitespaces::before {
@@ -631,7 +655,6 @@ input[name='ticketCustom'] {
 
 @media screen and (max-width: 700px) {
   .header__nav {
-    min-width: 350px;
     font-size: 1rem;
   }
   .header__nav-item {
@@ -654,17 +677,14 @@ input[name='ticketCustom'] {
     padding: 3px 4px;
     margin-left: 5px;
   }
-  .header .seats__body-table-seats-place + label {
-    font-size: .75rem;
-  }
-  .header .seats__body-table {
-    border-spacing: 10px;
+  .content__seats {
+    width: 100%;
   }
 }
 
 @media screen and (max-width: 529px) {
   .container {
-    width: 90vw;
+    width: 93vw;
   }
   .header {
     height: 140px;
@@ -678,11 +698,14 @@ input[name='ticketCustom'] {
   .header__nav-item {
     padding: 0;
   }
+  .content__seats {
+    width: 100%;
+  }
   .seats__body-table {
-    border-spacing: 5px;
+    border-spacing: 2px;
   }
   .seats__body-table-seats-place + label {
-    font-size: .8rem;
+    font-size: 1rem;
   }
 }
 
@@ -691,21 +714,33 @@ input[name='ticketCustom'] {
     width: 99vw;
   }
   .header__container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
   .header__nav {
-    min-width: 300px;
+    width: 100%;
     margin-top: 5px;
     font-size: .8rem;
   }
+  .header__nav-list {
+    width: 98%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 5px;
+  }
   .header__nav-item {
-    margin: 2px;
+    margin: 0;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+  .header__nav-item a {
+    padding: 0 2px;
   }
   .header__account {
     margin-bottom: 10px;
@@ -729,7 +764,7 @@ input[name='ticketCustom'] {
     font-size: 1rem;
   }
   .seats__body-table {
-    border-spacing: 5px;
+    border-spacing: 3px;
   }
   .seats__body-table-seats-place + label {
     font-size: 1rem;
