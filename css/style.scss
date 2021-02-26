@@ -355,6 +355,7 @@ table {
             margin-top: 20px;
             width: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
 
@@ -425,12 +426,20 @@ table {
             cursor: not-allowed;
         }
     }
+
+    &__body-ticket-preview {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
 
 input[name='ticketDate'],
 input[name='ticketTime'],
 input[name='ticketType'],
-input[name='ticketCustom'] {
+input[name='ticketCustom'],
+input[name='ticketCustomMulti'] {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -493,6 +502,66 @@ input[name='ticketCustom'] {
 
     &::after {
         content:"\00A0";
+    }
+}
+
+.ticket {
+
+    &__svg {
+        width: 70px;
+        height: 50px;
+    }
+
+    &__custom-svg {
+        width: 60px;
+        height: 40px;
+    }
+
+    &__date {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        font-size: 1.2rem;
+
+
+        &  .dynamic {
+            margin: 0 5px;
+            color: $green;
+            text-decoration: underline;
+        }
+
+        &  div {
+            padding: 0 10px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    &__amount {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 200px;
+
+        &  button {
+            margin: 0 10px;
+            padding: 0;
+            width: 150px;
+        }
+    }
+
+    &__icon {
+    fill: $darkGreen;
     }
 }
 
@@ -712,4 +781,50 @@ input[name='ticketCustom'] {
             font-size: .8rem;
         }
     }
+
+    .ticket__date {
+        justify-content: start;
+        align-items: flex-start;
+    }
+
+    .btn-go-back, .btn-go-to-pay {
+       margin: 0 !important;
+       padding: 0 !important;
+    }
+}
+
+.hidden {
+    display: none;
+    position: fixed;
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    background-color: $bgColor1;
+    overflow: scroll;
+    color: $font-color;
+    transform: translate(-50%, -50%);
+
+    & .ticket__date {
+        padding-top: 15vh;
+        padding-bottom: 7vh;
+    }
+
+    & .btn-go-back {
+        background-color: $lightRed;
+        color: $font-color;
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+    & .btn-go-to-pay {
+        background-color: $hoverBlue;
+        color: $font-color;
+    }
+}
+
+.visible {
+    display: block;
+    z-index: 3;
 }

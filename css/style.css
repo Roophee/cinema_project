@@ -435,6 +435,10 @@ table {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -510,10 +514,25 @@ table {
   cursor: not-allowed;
 }
 
+.seats__body-ticket-preview {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 input[name='ticketDate'],
 input[name='ticketTime'],
 input[name='ticketType'],
-input[name='ticketCustom'] {
+input[name='ticketCustom'],
+input[name='ticketCustomMulti'] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -589,6 +608,84 @@ input[name='ticketCustom'] {
 
 .whitespaces::after {
   content: "\00A0";
+}
+
+.ticket__svg {
+  width: 70px;
+  height: 50px;
+}
+
+.ticket__custom-svg {
+  width: 60px;
+  height: 40px;
+}
+
+.ticket__date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.ticket__date .dynamic {
+  margin: 0 5px;
+  color: #2E7D32;
+  text-decoration: underline;
+}
+
+.ticket__date div {
+  padding: 0 10px;
+}
+
+.ticket__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  height: 50px;
+  font-size: 1rem;
+}
+
+.ticket__amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+}
+
+.ticket__amount button {
+  margin: 0 10px;
+  padding: 0;
+  width: 150px;
+}
+
+.ticket__icon {
+  fill: #1B5E20;
 }
 
 @media screen and (max-width: 1180px) {
@@ -772,5 +869,55 @@ input[name='ticketCustom'] {
   .seats__body-table-row {
     font-size: .8rem;
   }
+  .ticket__date {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .btn-go-back, .btn-go-to-pay {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.hidden {
+  display: none;
+  position: fixed;
+  width: 95%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  background-color: #1a1919;
+  overflow: scroll;
+  color: #FAFAFA;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.hidden .ticket__date {
+  padding-top: 15vh;
+  padding-bottom: 7vh;
+}
+
+.hidden .btn-go-back {
+  background-color: #ef5350;
+  color: #FAFAFA;
+}
+
+.hidden .btn-go-back:hover {
+  background-color: #c62828;
+}
+
+.hidden .btn-go-to-pay {
+  background-color: #1565C0;
+  color: #FAFAFA;
+}
+
+.visible {
+  display: block;
+  z-index: 3;
 }
 /*# sourceMappingURL=style.css.map */

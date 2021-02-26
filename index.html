@@ -117,6 +117,108 @@
                     </h2>
                 </div>
                 <form class="seats__body">
+                    <div class="seats__body-type">
+                        <p>
+                            Дата:
+                        </p>
+                        <input type="radio" name="ticketDate" id="mar_21_2021" value="21_02_2021" required>
+                        <label for="mar_21_2021">
+                            <time datetime="21.03.2021 00-00">21 марта</time>
+                        </label>
+                        <input type="radio" name="ticketDate" id="mar_22_2021" value="22_02_2021">
+                        <label for="mar_22_2021">
+                            <time datetime="22.03.2021 00-00">22 марта</time>
+                        </label>
+                        <input type="radio" name="ticketDate" id="mar_23_2021" value="23_02_2021">
+                        <label for="mar_23_2021">
+                            <time datetime="23.03.2021 00-00">23 марта</time>
+                        </label>
+                        <input type="radio" name="ticketDate" id="mar_24_2021" value="24_02_2021">
+                        <label for="mar_24_2021">
+                            <time datetime="24.03.2021 00-00">24 марта</time>
+                        </label>
+                        <br>
+                        <p>
+                            Время сеанса:
+                        </p>
+                        <input type="radio" name="ticketTime" id="time_08_00" value="time_08_00" required>
+                        <label for="time_08_00">
+                            <time>08-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_10_00" value="time_10_00">
+                        <label for="time_10_00">
+                            <time>10-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_12_00" value="time_12_00">
+                        <label for="time_12_00">
+                            <time>12-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_14_00" value="time_14_00">
+                        <label for="time_14_00">
+                            <time>14-00</time>
+                        </label>
+                        <br>
+                        <br>
+                        <input type="radio" name="ticketTime" id="time_16_00" value="time_16_00">
+                        <label for="time_16_00">
+                            <time>16-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_18_00" value="time_18_00">
+                        <label for="time_18_00">
+                            <time>18-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_20_00" value="time_20_00">
+                        <label for="time_20_00">
+                            <time>20-00</time>
+                        </label>
+                        <input type="radio" name="ticketTime" id="time_22_00" value="time_22_00">
+                        <label for="time_22_00">
+                            <time>22-00</time>
+                        </label>
+                        <p>
+                            Тип билета:
+                        </p>
+                        <input type="radio" name="ticketType" id="fullTicketPrice" value="full" required>
+                        <label for="fullTicketPrice">
+                            Полный
+                        </label>
+                        <input type="radio" name="ticketType" id="childTicketPrice" value="child">
+                        <label for="childTicketPrice">
+                            Детский
+                        </label>
+                        <input type="radio" name="ticketType" id="halfTicketPrice" value="half" disabled>
+                        <label for="halfTicketPrice">
+                            Льготный
+                        </label>
+                        <p>
+                            Дополнительный заказ:
+                        </p>
+                        <input type="checkbox" name="ticketCustom" id="popCorn250" value="corn250">
+                        <label for="popCorn250">
+                            Попкорн 250гр
+                        </label>
+                        <input type="checkbox" name="ticketCustom" id="popCorn500" value="corn500">
+                        <label for="popCorn500">
+                            Попкорн 500гр
+                        </label>
+                        <br>
+                        <br>
+                        <input type="checkbox" name="ticketCustom" id="pepsi500" value="pepsi05">
+                        <label for="pepsi500">
+                            Pepsi 0,5 (стакан)
+                        </label>
+                        <input type="checkbox" name="ticketCustom" id="3d_glasses" value="glases">
+                        <label for="3d_glasses">
+                            3D-очки
+                        </label>
+                        <p>
+                        Мультипликатор опций:
+                        </p>
+                        <input type="checkbox" name="ticketCustomMulti" id="multi" value="true">
+                        <label for="multi">
+                            Расчитывать опции на кадый билет
+                        </label>
+                    </div>
                     <table class="seats__body-table">
                         <thead>
                             <tr>
@@ -320,104 +422,12 @@
                             </tr>
 
                     </tbody></table>
-                    <div class="seats__body-type">
-                        <p>
-                            Дата:
-                        </p>
-                        <input type="radio" name="ticketDate" id="mar_21_2021" value="21_03_2021" required>
-                        <label for="mar_21_2021">
-                            <time datetime="21.03.2021 00-00">21 марта</time>
-                        </label>
-                        <input type="radio" name="ticketDate" id="mar_22_2021" value="22_03_2021">
-                        <label for="mar_22_2021">
-                            <time datetime="22.03.2021 00-00">22 марта</time>
-                        </label>
-                        <input type="radio" name="ticketDate" id="mar_23_2021" value="23_03_2021">
-                        <label for="mar_23_2021">
-                            <time datetime="23.03.2021 00-00">23 марта</time>
-                        </label>
-                        <input type="radio" name="ticketDate" id="mar_24_2021" value="24_03_2021">
-                        <label for="mar_24_2021">
-                            <time datetime="24.03.2021 00-00">24 марта</time>
-                        </label>
-                        <br>
-                        <p>
-                            Время сеанса:
-                        </p>
-                        <input type="radio" name="ticketTime" id="time_08_00" value="time_08_00" required>
-                        <label for="time_08_00">
-                            <time>08-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_10_00" value="time_10_00">
-                        <label for="time_10_00">
-                            <time>10-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_12_00" value="time_12_00">
-                        <label for="time_12_00">
-                            <time>12-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_14_00" value="time_14_00">
-                        <label for="time_14_00">
-                            <time>14-00</time>
-                        </label>
-                        <br>
-                        <br>
-                        <input type="radio" name="ticketTime" id="time_16_00" value="time_16_00">
-                        <label for="time_16_00">
-                            <time>16-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_18_00" value="time_18_00">
-                        <label for="time_18_00">
-                            <time>18-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_20_00" value="time_20_00">
-                        <label for="time_20_00">
-                            <time>20-00</time>
-                        </label>
-                        <input type="radio" name="ticketTime" id="time_22_00" value="time_22_00">
-                        <label for="time_22_00">
-                            <time>22-00</time>
-                        </label>
-                        <p>
-                            Тип билета:
-                        </p>
-                        <input type="radio" name="ticketType" id="fullTicketPrice" value="full" required>
-                        <label for="fullTicketPrice">
-                            Полный
-                        </label>
-                        <input type="radio" name="ticketType" id="childTicketPrice" value="child">
-                        <label for="childTicketPrice">
-                            Детский
-                        </label>
-                        <input type="radio" name="ticketType" id="halfTicketPrice" value="half" disabled>
-                        <label for="halfTicketPrice">
-                            Льготный
-                        </label>
-                        <p>
-                            Дополнительный заказ:
-                        </p>
-                        <input type="checkbox" name="ticketCustom" id="popCorn250" value="corn250">
-                        <label for="popCorn250">
-                            Попкорн 250гр
-                        </label>
-                        <input type="checkbox" name="ticketCustom" id="popCorn500" value="corn500">
-                        <label for="popCorn500">
-                            Попкорн 500гр
-                        </label>
-                        <br>
-                        <br>
-                        <input type="checkbox" name="ticketCustom" id="pepsi500" value="pepsi05">
-                        <label for="pepsi500">
-                            Pepsi 0,5 (стакан)
-                        </label>
-                        <input type="checkbox" name="ticketCustom" id="3d_glasses" value="3d">
-                        <label for="3d_glasses">
-                            3D-очки
-                        </label>
-                    </div>
+
                     <div class="seats__body-submit">
+                        <div class="seats__body-ticket-preview" hidden="true">
+                        </div>
                         <div class="seats__body-submit-btn">
-                            <button type="submit">Оформить заказ</button>
+                            <button type="submit" class="total-amount">Оформить заказ</button>
                         </div>
                     </div>
                 </form>
@@ -441,6 +451,7 @@
             <a href="http://littlecinema.net/" class="footer__link" target="_ablank"><img class="footer__logo-img " src="img/logo2.png" alt="Little Cinema"></a>
         </section>
     </footer>
+    <div class="hidden"></div>
 </div>
 <script src="js/index.js"></script>
 </body>
