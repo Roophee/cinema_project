@@ -168,7 +168,7 @@ const createSeatRowNode = ({row, seat}) => {
     seatNode.classList.add('ticket__item')
     seatNode.innerHTML = `
                     <svg type="icon" class="ticket__svg">
-                        <use xlink:href="cinema_project/img/sprite.svg#ticket2" class="ticket__icon"></use>
+                        <use xlink:href="/cinema_project/img/sprite.svg#ticket2" class="ticket__icon"></use>
                     </svg>
                     <span>Ряд: ${row} Место: ${seat}</span>`
     return seatNode;
@@ -182,7 +182,7 @@ const createSeatRowNodeWithPrice = ({row, seat}, {seatPrice}) => {
     seatNode.classList.add('ticket__item')
     seatNode.innerHTML = `
                     <svg type="icon" class="ticket__svg">
-                        <use xlink:href="cinema_project/img/sprite.svg#ticket2" class="ticket__icon"></use>
+                        <use xlink:href="/cinema_project/img/sprite.svg#ticket2" class="ticket__icon"></use>
                     </svg>
                     <span>Ряд: ${row} Место: ${seat} --${localPrice} грн</span>`
     return seatNode;
@@ -219,7 +219,7 @@ const createCustomTicketNode = ({value}, multi=false) => {
     customNode.classList.add('ticket__item')
     customNode.innerHTML = `
                     <svg type="icon" class="ticket__custom-svg">
-                        <use xlink:href="cinema_project/img/sprite.svg#${getCustonSvgInfo(value, 'id')}" class="ticket__icon"></use>
+                        <use xlink:href="/cinema_project/img/sprite.svg#${getCustonSvgInfo(value, 'id')}" class="ticket__icon"></use>
                     </svg>
                     <span>${getCustonSvgInfo(value, 'content')} x ${setMulti(multi)}`
     return customNode;
@@ -232,7 +232,7 @@ const createCustomNodeWithPrice = (value, priceList) => {
     customNode.classList.add('ticket__item')
     customNode.innerHTML = `
                     <svg type="icon" class="ticket__custom-svg">
-                        <use xlink:href="cinema_project/img/sprite.svg#${getCustonSvgInfo(value, 'id')}" class="ticket__icon"></use>
+                        <use xlink:href="/cinema_project/img/sprite.svg#${getCustonSvgInfo(value, 'id')}" class="ticket__icon"></use>
                     </svg>
                     <span>${getCustonSvgInfo(value, 'content')} x ${multi} -- ${priceList[value]*multi} грн `
     return customNode;
